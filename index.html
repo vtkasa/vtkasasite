@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT KASA Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/icon.pdf" type="image/x-icon" />
+</head>
+
+<body>
+    <!-- Hero Header Section -->
+    <div class="hero-header" role="banner">
+        <div class="wrapper">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="VT KASA Logo" class="logo">
+            </div>
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="font-effect-neon">Virginia Tech KASA</h1>
+                    <p>As the Korean American Student Association, our purpose is to promote cultural awareness and a
+                        greater sense of the Korean American community throughout the campus by educating and
+                        socializing among students.</p>
+
+                    <div class="btn-group" role="group" aria-label="Linktree and Contact button">
+                        <a href="https://linktr.ee/vtkasa?fbclid=PAZXh0bgNhZW0CMTEAAabOSZawH0YRzOD8rtH0nKM3EntThZGIVJ3MiI5e117Be-ypjeoyULqdG8Q_aem_s33fD8H-noLjmcCoHVFFxg"
+                            class="btn active" target="_blank" aria-label="Our Linktree">Our Linktree!</a>
+                        <a href="mailto:vtkasa@gmail.com" class="btn active" aria-label="Contact via email">Contact Us!</a>
+                        <br><br>
+                        <a href="#newsletter" class="btn" aria-label="Newsletter Signup">Newsletter Signup!</a>
+                    </div>
+
+                    <div class="social" role="navigation" aria-label="Media links">
+                        <a href="https://www.facebook.com/vtkasa" target="_blank" aria-label="KASA Facebook"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/vt_kasa/" target="_blank" aria-label="KASA Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/user/VTKASA" target="_blank" aria-label="KASA Youtube"><i
+                                class="fa-brands fa-youtube"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <section class="about-us" id="about">
+        <div class="wrapper">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>About VT KASA</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <div class="image-grid">
+                        <img src="images/aboutUs.png" alt="Picture1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Officer Spotlight Section -->
+    <section class="officer-spotlight" id="officer-spotlight">
+        <div class="wrapper">
+            <h2>Our Officers!</h2>
+
+            <!-- Button Group to switch between teams -->
+            <div class="btn-group" role="group" aria-label="Officer Groups">
+                <button class="btn" onclick="showTeam('executive-board')">Executive Board</button>
+                <button class="btn" onclick="showTeam('media-team')">Media Team</button>
+                <button class="btn" onclick="showTeam('culture-chairs')">Culture Chairs</button>
+                <button class="btn" onclick="showTeam('coordinators')">Coordinators</button>
+                <button class="btn" onclick="showTeam('financial-team')">Financial Team</button>
+                <button class="btn" onclick="showTeam('senior-advisors&freps')">Senior Advisors and Freps</button>
+            </div>
+
+            <!-- Executive Board Section -->
+            <div class="officer-container" id="executive-board">
+                <div class="officer-card">
+                    <img src="images/president.jpg" alt="President Image" class="officer-image">
+                    <h3>Sean Fleming</h3>
+                    <p>President</p>
+                </div>
+                <div class="officer-card">
+                    <img src="images/vp.jpg" alt="Vice President Image" class="officer-image">
+                    <h3>Andy Dwiyanto</h3>
+                    <p>Vice President</p>
+                </div>
+            </div>
+
+            <!-- Media Team Section -->
+            <div class="officer-container" id="media-team" style="display:none;">
+                <div class="officer-card">
+                    <img src="images/media.jpg" alt="Media Director Image" class="officer-image">
+                    <h3>Anika Tsutsumi</h3>
+                    <p>Public Relations</p>
+                </div>
+                <div class="officer-card">
+                    <img src="images/media.jpg" alt="Media Director Image" class="officer-image">
+                    <h3>Timothy Tran</h3>
+                    <p>Historian</p>
+                </div>
+            </div>
+
+            <!-- Culture Chairs Section -->
+            <div class="officer-container" id="culture-chairs" style="display:none;">
+                <div class="officer-card">
+                    <img src="images/president.jpg" alt="President Image" class="officer-image">
+                    <h3>Izzy Kim</h3>
+                    <p>Culture Chair</p>
+                </div>
+                <div class="officer-card">
+                    <img src="images/vp.jpg" alt="Vice President Image" class="officer-image">
+                    <h3>Maddox Shreve</h3>
+                    <p>Culture Chair</p>
+                </div>
+            </div>
+
+            <!-- Coordinators Section -->
+            <div class="officer-container" id="coordinators" style="display:none;">
+                <div class="officer-card">
+                    <img src="images/event-coordinator.jpg" alt="Event Coordinator Image" class="officer-image">
+                    <h3>Maya Kim</h3>
+                    <p>Event Coordinator</p>
+                </div>
+                <div class="officer-card">
+                    <img src="images/event-coordinator.jpg" alt="Event Coordinator Image" class="officer-image">
+                    <h3>Dana Kim</h3>
+                    <p>Event Coordinator</p>
+                </div>
+                <div class="officer-card">
+                    <img src="images/event-coordinator.jpg" alt="Event Coordinator Image" class="officer-image">
+                    <h3>Nathan Ton</h3>
+                    <p>Sports Coordinator</p>
+                </div>
+                <div class="officer-card">
+                    <img src="images/event-coordinator.jpg" alt="Event Coordinator Image" class="officer-image">
+                    <h3>Matthew Tran</h3>
+                    <p>Sports Coordinator</p>
+                </div>
+            </div>
+
+            <!-- Financial Team Section -->
+            <div class="officer-container" id="financial-team" style="display:none;">
+                <div class="officer-card">
+                    <img src="images/treasurer.jpg" alt="Treasurer Image" class="officer-image">
+                    <h3>Mai Pham</h3>
+                    <p>Treasurer</p>
+                </div>
+                <div class="officer-card">
+                    <img src="images/treasurer.jpg" alt="Treasurer Image" class="officer-image">
+                    <h3>Jonathan Kim</h3>
+                    <p>Fundraising Chair</p>
+                </div>
+                <div class="officer-card">
+                    <img src="images/treasurer.jpg" alt="Treasurer Image" class="officer-image">
+                    <h3>Tatiana Peal</h3>
+                    <p>Service Chair</p>
+                </div>
+            </div>
+
+            <!-- Senior Advisors and Freps Section -->
+            <div class="officer-container" id="senior-advisors&freps" style="display:none;">
+                <div class="officer-card">
+                    <img src="images/treasurer.jpg" alt="Treasurer Image" class="officer-image">
+                    <h3>Steve Kim</h3>
+                    <p>Senior Advisor</p>
+                </div>
+                <div class="officer-card">
+                    <img src="images/treasurer.jpg" alt="Treasurer Image" class="officer-image">
+                    <h3>Tammy Tran</h3>
+                    <p>Senior Advisor</p>
+                </div>
+                <div class="officer-card">
+                    <img src="images/treasurer.jpg" alt="Treasurer Image" class="officer-image">
+                    <h3>Johnny Tran</h3>
+                    <p>Senior Advisor</p>
+                </div>
+                <div class="officer-card">
+                    <img src="images/treasurer.jpg" alt="Treasurer Image" class="officer-image">
+                    <h3>Claire Cho</h3>
+                    <p>Freshman Representative</p>
+                </div>
+                <div class="officer-card">
+                    <img src="images/treasurer.jpg" alt="Treasurer Image" class="officer-image">
+                    <h3>Samantha Lee</h3>
+                    <p>Freshman Representative</p>
+                </div>
+                <div class="officer-card">
+                    <img src="images/treasurer.jpg" alt="Treasurer Image" class="officer-image">
+                    <h3>Nuri Kim</h3>
+                    <p>Freshman Representative</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Booth Gallery Section -->
+    <section class="photo-booth" id="photo-booth">
+        <div class="wrapper">
+            <h2>Photo Booth Gallery</h2>
+            <div class="gallery-grid">
+                <img src="images/kasaSports.jpg" alt="Photo Booth 1">
+                <img src="images/kasaSports.jpg" alt="Photo Booth 2">
+                <img src="images/kasaSports.jpg" alt="Photo Booth 3">
+                <img src="images/kasaSports.jpg" alt="Photo Booth 4">
+                <img src="images/kasaSports.jpg" alt="Photo Booth 5">
+                <img src="images/kasaSports.jpg" alt="Photo Booth 6">
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="newsletter-signup" id="newsletter">
+        <div class="wrapper">
+            <h2>Subscribe to our Newsletter!</h2>
+            <!-- Embed Mailchimp Form -->
+            <div id="mc_embed_shell">
+                <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                <style type="text/css">
+                    #mc_embed_signup {
+                        background: #fff;
+                        clear: left;
+                        font: 14px Helvetica, Arial, sans-serif;
+                        width: 100%;
+                        max-width: 600px;
+                        margin: 0 auto;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+                    }
+                </style>
+                <div id="mc_embed_signup">
+                    <form action="https://facebook.us17.list-manage.com/subscribe/post?u=9dbc41653b68d3a40033a8ff9&amp;id=8f8b667fbf&amp;f_id=00b0dee3f0"
+                          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                        <div id="mc_embed_signup_scroll">
+                            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                            <div class="mc-field-group">
+                                <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="">
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-FNAME">First Name </label>
+                                <input type="text" name="FNAME" class="" id="mce-FNAME">
+                            </div>
+                            <div id="mce-responses" class="clear foot">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>
+                            <div aria-hidden="true" style="position:absolute; left:-5000px;">
+                                <input type="text" name="b_9dbc41653b68d3a40033a8ff9_8f8b667fbf" tabindex="-1" value="">
+                            </div>
+                            <div class="optionalParent">
+                                <div class="clear foot">
+                                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        window.onload = function () {
+            window.scrollTo(0, 0);  // Scrolls to the top of the page when the site loads
+        };
+
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function () {
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+
+        function showTeam(teamId) {
+            var teams = document.querySelectorAll('.officer-container');
+            teams.forEach(function (team) {
+                team.style.display = 'none';
+            });
+
+            var selectedTeam = document.getElementById(teamId);
+            if (selectedTeam) {
+                selectedTeam.style.display = 'flex';  
+            }
+        }
+
+        document.getElementById('executive-board').style.display = 'flex';
+        document.querySelector('a[href="#newsletter"]').addEventListener('click', function (e) {
+            e.preventDefault(); 
+            const targetElement = document.querySelector('#newsletter');
+        });
+    </script>
+</body>
+
+</html>
+    
