@@ -20,7 +20,7 @@ body {
   background-attachment: fixed; 
   background-size: 400% 400%; 
   animation: gradientAnimation 10s ease infinite;
-  font-size: 1.6vw; 
+  font-size: clamp(12px, 1.6vw, 18px); 
 }
 
 @keyframes gradientAnimation {
@@ -66,13 +66,13 @@ body {
 
 .hero-text h1 {
   color: #ffffff;
-  font-size: 3.5vw;
+  font-size: clamp(24px, 3.5vw, 48px); 
   text-align: center; 
 }
 
 .hero-text p {
   color: #ffffff;
-  font-size: 1.5vw;
+  font-size: clamp(14px, 1.5vw, 20px); 
   text-align: center; 
 }
 
@@ -90,29 +90,13 @@ body {
   padding: 1rem 2rem; 
   margin: 0.5rem;
   border-radius: 20px;
-  font-size: 1.2rem; 
+  font-size: clamp(12px, 1.2vw, 16px); 
   position: relative;
   overflow: hidden;
   transition: background 0.1s ease, color 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
   box-shadow: 0 0 15px rgb(17, 0, 255, 0.4);
   text-align: center;
 }
-
-@media (max-width: 768px) {
-  .btn-group .btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem; 
-  }
-}
-
-@media (max-width: 480px) {
-  .btn-group .btn {
-    padding: 0.6rem 1.2rem; 
-    font-size: 0.9rem; 
-    width: 80%; 
-  }
-}
-
 
 .btn-group .btn::before {
   content: '';
@@ -145,16 +129,9 @@ body {
   transform: translateX(5px);
 }
 
-.btn {
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
 .social i {
   color: #ccc;
-  font-size: 2vw;
+  font-size: clamp(16px, 2vw, 32px); 
   margin-right: 1vw;
   transition: 0.5s;
 }
@@ -191,17 +168,16 @@ body {
 }
 
 .about-text h2 {
-  font-size: 3vw;
+  font-size: clamp(24px, 3vw, 40px); 
   margin-bottom: 2vh;
-  text-align: center;
 }
 
 .about-text p {
-  font-size: 1.4vw;
+  font-size: clamp(14px, 1.4vw, 18px); 
   line-height: 1.5;
   margin-bottom: 2vh;
-  text-align: center; 
 }
+
 .about-image {
   flex: 1.25; 
   max-width: 50vw; 
@@ -222,7 +198,6 @@ body {
   box-shadow: 0 0.5vh 0.5vw rgba(0, 0, 0, 0.1);
 }
 
-
 /* Officer Spotlight Section */
 .officer-spotlight {
   width: 100%;
@@ -235,7 +210,7 @@ body {
 }
 
 .officer-spotlight h2 {
-  font-size: 4vw;
+  font-size: clamp(28px, 4vw, 48px);
   color: #ffffff;
   text-align: center; 
   margin-bottom: -3vw;
@@ -271,7 +246,7 @@ body {
 }
 
 .photo-booth h2 {
-  font-size: 3vw;
+  font-size: clamp(24px, 3vw, 40px); 
   color: #ffffff;
   text-align: center; 
 }
@@ -295,34 +270,6 @@ body {
   align-items: center;
 }
 
-@media (max-width: 1024px) {
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 1vw; 
-    max-width: 75vw; 
-  }
-}
-
-@media (max-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(2, auto);
-    max-width: 85vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(2, auto);
-    max-width: 90vw;
-  }
-}
-
-
-
-
 /* Newsletter Signup Section */
 .newsletter-signup {
   width: 100%;
@@ -335,7 +282,7 @@ body {
 }
 
 .newsletter-signup h2 {
-  font-size: 3vw;
+  font-size: clamp(24px, 3vw, 40px); 
   color: #ffffff;
   margin-bottom: 2vh;
   text-align: center; 
@@ -354,7 +301,7 @@ body {
   flex: 1;
   border-radius: 2vw;
   border: 2px solid #ccc;
-  font-size: 1.5vw;
+  font-size: clamp(14px, 1.5vw, 18px); 
   max-width: 30vw;
   text-align: center; 
 }
@@ -366,7 +313,7 @@ body {
   padding: 1rem 2rem;
   margin: 0.5rem;
   border-radius: 20px;
-  font-size: 1.2rem;
+  font-size: clamp(12px, 1.2vw, 16px); 
   position: relative;
   overflow: hidden;
   transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.3s ease;
@@ -396,6 +343,7 @@ body {
   box-shadow: 0 12px 20px -10px rgb(255, 255, 255, 0.2);
 }
 
+/* Media Queries for input adjustments */
 @media (max-width: 768px) {
   .newsletter-form input[type="email"] {
     max-width: 50vw;
