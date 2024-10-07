@@ -142,11 +142,10 @@ body {
   color: #69359c;
   transform: rotate(360deg);
 }
-
 /* About Us Section */
 .about-us {
   width: 100%;
-  height: 100vh;
+  height: auto; 
   padding: 4vh 0;
   display: flex;
   justify-content: center;
@@ -156,7 +155,8 @@ body {
 
 .about-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   max-width: 85vw;
   gap: 1.5vw;
@@ -182,8 +182,10 @@ body {
 
 .about-image {
   flex: 1;
-  max-width: 80vw;
+  max-width: 60vw;
   text-align: center;
+  margin-top: 2vh; 
+
 }
 
 .image-grid {
@@ -199,6 +201,7 @@ body {
   object-fit: cover;
   box-shadow: 0 0.5vh 0.5vw rgba(0, 0, 0, 0.1);
 }
+
 /* Officer Spotlight Section */
 .officer-spotlight {
   width: 100%;
@@ -208,6 +211,7 @@ body {
   align-items: center;
   flex-direction: column;
   margin-bottom: 20vw;
+  margin-top: 10vw; 
 }
 
 .officer-spotlight h2 {
@@ -219,9 +223,9 @@ body {
 
 .officer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Automatically adjust based on available space */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
   gap: 2vw;
-  justify-items: center; /* Ensure all cards are centered */
+  justify-items: center; 
   width: 100%;
   padding: 0 5vw;
 }
@@ -236,13 +240,13 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers content in the card */
+  align-items: center; 
   width: 100%;
 }
 
 .officer-card img {
   width: 100%;
-  aspect-ratio: 3 / 4; /* Ensures a consistent aspect ratio */
+  aspect-ratio: 3 / 4; 
   object-fit: cover;
   border-radius: 1vw;
   box-shadow: 0 0.5vh 0.5vw rgba(0, 0, 0, 0.1);
@@ -265,13 +269,13 @@ body {
 /* Responsive Design Adjustments */
 @media (max-width: 1024px) {
   .officer-container {
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 
 @media (max-width: 768px) {
   .officer-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    grid-template-columns: repeat(2, 1fr); 
   }
 
   .officer-card {
@@ -281,7 +285,7 @@ body {
 
 @media (max-width: 480px) {
   .officer-container {
-    grid-template-columns: repeat(1, 1fr); /* 1 card per row */
+    grid-template-columns: repeat(1, 1fr); 
   }
 
   .officer-card {
