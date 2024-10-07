@@ -179,8 +179,8 @@ body {
 }
 
 .about-image {
-  flex: 1.25; 
-  max-width: 50vw; 
+  flex: 1; 
+  max-width: 80vw; 
   text-align: center; 
 }
 
