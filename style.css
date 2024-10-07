@@ -96,7 +96,7 @@ body {
   position: relative;
   overflow: hidden;
   transition: background 0.1s ease, color 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
-  box-shadow: 0 0 15px rgb(17, 0, 255, 0.4);
+  box-shadow: 0 0 15px rgba(17, 0, 255, 0.4);
   text-align: center;
 }
 
@@ -107,7 +107,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: rgb(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
   transition: left 0.5s ease;
 }
 
@@ -119,7 +119,7 @@ body {
   background-color: #003478;
   color: #ffffff;
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 12px 20px -10px rgb(255, 255, 255, 0.2);
+  box-shadow: 0 12px 20px -10px rgba(255, 255, 255, 0.2);
 }
 
 .btn-group .btn i {
@@ -142,6 +142,7 @@ body {
   color: #69359c;
   transform: rotate(360deg);
 }
+
 /* About Us Section */
 .about-us {
   width: 100%;
@@ -185,7 +186,6 @@ body {
   max-width: 60vw;
   text-align: center;
   margin-top: 2vh; 
-
 }
 
 .image-grid {
@@ -223,30 +223,32 @@ body {
 
 .officer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2vw;
-  justify-items: center; 
+  justify-items: stretch; /* Changed from center to stretch */
+  align-items: stretch; /* Ensures all cards stretch to the same height */
   width: 100%;
   padding: 0 5vw;
 }
 
-/* Officer Card Styling */
 .officer-card {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid #ddd;
   border-radius: 1vw;
   box-shadow: 0 0.5vh 0.5vw rgba(0, 0, 0, 0.1);
-  padding: 2vh;
+  padding: 2vh 1.5vw; /* Adjusted padding */
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  justify-content: space-between; /* Distributes space evenly */
+  align-items: center;
   width: 100%;
+  height: 100%; /* Ensures the card takes full height of the grid cell */
 }
 
 .officer-card img {
   width: 100%;
-  aspect-ratio: 3 / 4; 
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: 1vw;
   box-shadow: 0 0.5vh 0.5vw rgba(0, 0, 0, 0.1);
@@ -256,40 +258,44 @@ body {
 .officer-card h3 {
   font-size: clamp(18px, 2vw, 24px);
   color: #003478;
-  margin-bottom: 0.5vh;
+  margin-bottom: 1vh; /* Increased margin for consistency */
+  font-weight: 700; /* Added font-weight for better hierarchy */
 }
 
 .officer-card p {
   font-size: clamp(14px, 1.5vw, 18px);
-  line-height: 1.4;
+  line-height: 1.6; /* Increased for readability */
   color: #333;
   text-align: center;
+  flex-grow: 1; /* Allows the paragraph to take up remaining space */
+  margin-bottom: 1.5vh; /* Consistent with image margin */
 }
 
 /* Responsive Design Adjustments */
 @media (max-width: 1024px) {
   .officer-container {
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .officer-container {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .officer-card {
-    padding: 1.5vh;
+    padding: 1.5vh 1vw;
   }
 }
 
 @media (max-width: 480px) {
   .officer-container {
-    grid-template-columns: repeat(1, 1fr); 
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .officer-card {
     width: 100%;
+    padding: 1vh 0.5vw;
   }
 
   .officer-card h3 {
@@ -300,8 +306,6 @@ body {
     font-size: clamp(12px, 3vw, 16px);
   }
 }
-
-
 
 /* Photo Booth Gallery Section */
 .photo-booth {
@@ -387,8 +391,6 @@ body {
   border-radius: 0 0 1vw 1vw;
 }
 
-
-
 /* Newsletter Signup Section */
 .newsletter-signup {
   width: 100%;
@@ -447,7 +449,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: rgb(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
   transition: left 0.5s ease;
 }
 
@@ -459,7 +461,7 @@ body {
   background-color: #000000;
   color: #ffffff;
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 12px 20px -10px rgb(255, 255, 255, 0.2);
+  box-shadow: 0 12px 20px -10px rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 768px) {
