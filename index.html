@@ -211,20 +211,40 @@
         </div>
     </section>
 
-    <!-- Photo Booth Gallery Section -->
-    <section class="photo-booth" id="photo-booth">
+    <!-- Our Events Section -->
+    <section class="our-events" id="our-events">
         <div class="wrapper">
-            <h2>Photo Booth Gallery</h2>
-            <div class="gallery-grid">
-                <img src="images/picnic.jpg" alt="Photo Booth 1">
-                <img src="images/picnic.jpg" alt="Photo Booth 2">
-                <img src="images/picnic.jpg" alt="Photo Booth 3">
-                <img src="images/picnic.jpg" alt="Photo Booth 4">
-                <img src="images/picnic.jpg" alt="Photo Booth 5">
-                <img src="images/picnic.jpg" alt="Photo Booth 6">
+            <h2>Our Events!</h2>
+            <div class="events-grid">
+                <div class="event-item">
+                    <img src="images/picnic.jpg" alt="Event 1"> 
+                    <div class="overlay-text">Welcome Back Picnic</div>
+                </div>
+                <div class="event-item">
+                    <img src="images/picnic.jpg" alt="Event 2">
+                    <div class="overlay-text">Welcome Back Picnic</div>
+                </div>
+                <div class="event-item">
+                    <img src="images/picnic.jpg" alt="Event 3">
+                    <div class="overlay-text">Welcome Back Picnic</div>
+                </div>
+                <div class="event-item">
+                    <img src="images/picnic.jpg" alt="Event 4">
+                    <div class="overlay-text">Welcome Back Picnic</div>
+                </div>
+                <div class="event-item">
+                    <img src="images/picnic.jpg" alt="Event 5">
+                    <div class="overlay-text">Welcome Back Picnic</div>
+                </div>
+                <div class="event-item">
+                    <img src="images/picnic.jpg" alt="Event 6">
+                    <div class="overlay-text">Welcome Back Picnic</div>
+                </div>
             </div>
         </div>
     </section>
+
+
 
     <!-- Newsletter Signup Section -->
     <section class="newsletter-signup" id="newsletter">
@@ -279,10 +299,10 @@
     </section>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
     <script>
         window.onload = function () {
             window.scrollTo(0, 0);  // Scrolls to the top of the page when the site loads
+            showTeam('executive-board'); // Automatically display Executive Board on load
         };
 
         var togglebtn = document.querySelector(".togglebtn");
@@ -296,21 +316,21 @@
         function showTeam(teamId) {
             var teams = document.querySelectorAll('.officer-container');
             teams.forEach(function (team) {
-                team.style.display = 'none';
+                team.style.display = 'none'; // Hide all teams
             });
 
             var selectedTeam = document.getElementById(teamId);
             if (selectedTeam) {
-                selectedTeam.style.display = 'flex';  
+                selectedTeam.style.display = 'flex';  // Show selected team
             }
         }
 
-        document.getElementById('executive-board').style.display = 'flex';
         document.querySelector('a[href="#newsletter"]').addEventListener('click', function (e) {
             e.preventDefault(); 
             const targetElement = document.querySelector('#newsletter');
         });
     </script>
+
 </body>
 
 </html>
