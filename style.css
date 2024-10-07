@@ -4,11 +4,11 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
-  font-family: 'Gaegu'; 
+  font-family: 'Gaegu';
 }
 
 html {
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
   height: 100%;
   overflow-x: hidden;
   margin: 0;
@@ -17,19 +17,21 @@ html {
 
 body {
   background: linear-gradient(135deg, #ffffff, #003478, #C60C30, #003478);
-  background-attachment: fixed; 
-  background-size: 400% 400%; 
+  background-attachment: fixed;
+  background-size: 400% 400%;
   animation: gradientAnimation 10s ease infinite;
-  font-size: clamp(20px, 1.6vw, 18px); 
+  font-size: clamp(20px, 1.6vw, 18px);
 }
 
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 50% 100%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -37,7 +39,7 @@ body {
 
 .hero-header {
   width: 100%;
-  height: 100vh; 
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,26 +56,26 @@ body {
 }
 
 .logo {
-  max-width: 16vw; 
+  max-width: 16vw;
   height: auto;
   margin-bottom: 1.5vh;
 }
 
 .hero-text {
-  max-width: 55vw; 
+  max-width: 55vw;
   text-align: center;
 }
 
 .hero-text h1 {
   color: #ffffff;
-  font-size: clamp(24px, 3.5vw, 48px); 
-  text-align: center; 
+  font-size: clamp(24px, 3.5vw, 48px);
+  text-align: center;
 }
 
 .hero-text p {
   color: #ffffff;
-  font-size: clamp(14px, 1.5vw, 20px); 
-  text-align: center; 
+  font-size: clamp(14px, 1.5vw, 20px);
+  text-align: center;
 }
 
 .btn-group {
@@ -87,10 +89,10 @@ body {
   background-color: #ffff;
   border: 2px solid #ffff;
   color: #003478;
-  padding: 1rem 2rem; 
+  padding: 1rem 2rem;
   margin: 0.5rem;
   border-radius: 20px;
-  font-size: clamp(12px, 1.2vw, 16px); 
+  font-size: clamp(12px, 1.2vw, 16px);
   position: relative;
   overflow: hidden;
   transition: background 0.1s ease, color 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
@@ -105,7 +107,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: rgb(0, 0, 0, 0.2); 
+  background: rgb(0, 0, 0, 0.2);
   transition: left 0.5s ease;
 }
 
@@ -131,7 +133,7 @@ body {
 
 .social i {
   color: #ccc;
-  font-size: clamp(16px, 2vw, 32px); 
+  font-size: clamp(16px, 2vw, 32px);
   margin-right: 1vw;
   transition: 0.5s;
 }
@@ -144,12 +146,12 @@ body {
 /* About Us Section */
 .about-us {
   width: 100%;
-  height: 100vh; 
+  height: 100vh;
   padding: 4vh 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; 
+  text-align: center;
 }
 
 .about-container {
@@ -158,51 +160,49 @@ body {
   align-items: center;
   max-width: 85vw;
   gap: 1.5vw;
-  text-align: center; 
+  text-align: center;
 }
 
 .about-text {
   flex: 1;
   color: #ffffff;
-  text-align: center; 
+  text-align: center;
 }
 
 .about-text h2 {
-  font-size: clamp(30px, 3vw, 40px); 
+  font-size: clamp(30px, 3vw, 40px);
   margin-bottom: 2vh;
 }
 
 .about-text p {
-  font-size: clamp(16px, 1.4vw, 18px); 
+  font-size: clamp(16px, 1.4vw, 18px);
   line-height: 1.5;
   margin-bottom: 2vh;
 }
 
 .about-image {
-  flex: 1; 
-  max-width: 80vw; 
-  text-align: center; 
+  flex: 1;
+  max-width: 80vw;
+  text-align: center;
 }
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.5vw;
 }
 
 .image-grid img {
   width: 100%;
-  height: auto; 
+  height: auto;
   border-radius: 1vw;
   object-fit: cover;
   box-shadow: 0 0.5vh 0.5vw rgba(0, 0, 0, 0.1);
 }
-
 /* Officer Spotlight Section */
 .officer-spotlight {
   width: 100%;
-  height: 100vh; 
-  padding: 4vh 0;
+  padding: 4vh 2vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,34 +210,97 @@ body {
 }
 
 .officer-spotlight h2 {
-  font-size: clamp(28px, 4vw, 48px);
+  font-size: clamp(24px, 4vw, 48px);
   color: #ffffff;
-  text-align: center; 
-  margin-bottom: -3vw;
+  text-align: center;
+  margin-bottom: 3vh;
 }
 
 .officer-container {
-  display: flex;
-  justify-content: center;
-  gap: 1vw;
-  flex-wrap: wrap;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  gap: 2vw;
+  justify-items: center; 
+  width: 100%;
+  padding: 0 5vw;
 }
 
+/* Officer Card Styling */
 .officer-card {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid #ddd;
   border-radius: 1vw;
   box-shadow: 0 0.5vh 0.5vw rgba(0, 0, 0, 0.1);
   padding: 2vh;
-  width: 24vw;
-  text-align: center; 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
+
+.officer-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4; 
+  object-fit: cover;
+  border-radius: 1vw;
+  box-shadow: 0 0.5vh 0.5vw rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5vh;
+}
+
+.officer-card h3 {
+  font-size: clamp(18px, 2vw, 24px);
+  color: #003478;
+  margin-bottom: 0.5vh;
+}
+
+.officer-card p {
+  font-size: clamp(14px, 1.5vw, 18px);
+  line-height: 1.4;
+  color: #333;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .officer-container {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .officer-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .officer-card {
+    padding: 1.5vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .officer-container {
+    grid-template-columns: repeat(1, 1fr); 
+  }
+
+  .officer-card {
+    width: 100%;
+  }
+
+  .officer-card h3 {
+    font-size: clamp(16px, 4vw, 22px);
+  }
+
+  .officer-card p {
+    font-size: clamp(12px, 3vw, 16px);
+  }
+}
+
+
 
 /* Photo Booth Gallery Section */
 .photo-booth {
   width: 100%;
-  height: auto; 
+  height: auto;
   padding: 4vh 0;
   display: flex;
   justify-content: center;
@@ -246,23 +309,23 @@ body {
 }
 
 .photo-booth h2 {
-  font-size: clamp(24px, 3vw, 40px); 
+  font-size: clamp(24px, 3vw, 40px);
   color: #ffffff;
-  text-align: center; 
+  text-align: center;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(2, auto); /* 2 rows */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
   gap: 1.5vw;
   margin-top: 2vh;
-  max-width: 85vw; 
+  max-width: 85vw;
 }
 
 .gallery-grid img {
   width: 100%;
-  height: auto; 
+  height: auto;
   border-radius: 1vw;
   object-fit: cover;
   box-shadow: 0 0.5vh 0.5vw rgba(0, 0, 0, 0.1);
@@ -273,8 +336,8 @@ body {
 /* Newsletter Signup Section */
 .newsletter-signup {
   width: 100%;
-  height: 100vh; 
-  padding: 4vh 0;
+  height: 100vh;
+  padding: 8vh 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -282,10 +345,10 @@ body {
 }
 
 .newsletter-signup h2 {
-  font-size: clamp(24px, 3vw, 40px); 
+  font-size: clamp(24px, 3vw, 40px);
   color: #ffffff;
-  margin-bottom: 2vh;
-  text-align: center; 
+  margin-bottom: 4vh;
+  text-align: center;
 }
 
 .newsletter-form {
@@ -293,7 +356,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1vw;
-  text-align: center; 
+  text-align: center;
 }
 
 .newsletter-form input[type="email"] {
@@ -301,9 +364,9 @@ body {
   flex: 1;
   border-radius: 2vw;
   border: 2px solid #ccc;
-  font-size: clamp(14px, 1.5vw, 18px); 
+  font-size: clamp(14px, 1.5vw, 18px);
   max-width: 30vw;
-  text-align: center; 
+  text-align: center;
 }
 
 .newsletter-form .btn {
@@ -313,12 +376,12 @@ body {
   padding: 1rem 2rem;
   margin: 0.5rem;
   border-radius: 20px;
-  font-size: clamp(12px, 1.2vw, 16px); 
+  font-size: clamp(12px, 1.2vw, 16px);
   position: relative;
   overflow: hidden;
   transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  text-align: center; 
+  text-align: center;
 }
 
 .newsletter-form .btn::before {
@@ -343,7 +406,6 @@ body {
   box-shadow: 0 12px 20px -10px rgb(255, 255, 255, 0.2);
 }
 
-/* Media Queries for input adjustments */
 @media (max-width: 768px) {
   .newsletter-form input[type="email"] {
     max-width: 50vw;
