@@ -14,8 +14,26 @@
 </head>
 
 <body>
+    <!-- Top Navigation Header -->
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="wrapper">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#officer-spotlight">Our Officers</a></li>
+                    <li><a href="#our-events">Our Events</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
     <!-- Hero Header Section -->
-    <div class="hero-header" role="banner">
+    <div class="hero-header" id="hero-header" role="banner">
         <div class="wrapper">
             <div class="logo-container">
                 <img src="images/logo.png" alt="VT KASA Logo" class="logo">
@@ -36,13 +54,9 @@
                     </div>
 
                     <div class="social" role="navigation" aria-label="Media links">
-                        <a href="https://www.facebook.com/vtkasa" target="_blank" aria-label="KASA Facebook"><i
-                                class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/vt_kasa/" target="_blank" aria-label="KASA Instagram"><i
-                                class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/user/VTKASA" target="_blank" aria-label="KASA Youtube"><i
-                                class="fa-brands fa-youtube"></i></a>
-
+                        <a href="https://www.facebook.com/vtkasa" target="_blank" aria-label="KASA Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/vt_kasa/" target="_blank" aria-label="KASA Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/user/VTKASA" target="_blank" aria-label="KASA Youtube"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -58,7 +72,6 @@
                     <p>
                         Here will be a short description of KASA
                     </p>
-                    
                 </div>
                 <div class="about-image">
                     <div class="image-grid">
@@ -299,20 +312,52 @@
     </section>
 
 
+    <!-- JavaScript for Header Show/Hide on Scroll and Other Functionalities -->
     <script>
+        // Header Show/Hide on Scroll
+        (function () {
+            let lastScrollTop = 0;
+            let scrollTimeout;
+            const header = document.querySelector('.site-header');
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down - hide header
+                    header.classList.add('header-hidden');
+                } else {
+                    // Scrolling up - show header
+                    header.classList.remove('header-hidden');
+                }
+
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+
+                // Clear the previous timeout
+                clearTimeout(scrollTimeout);
+
+                scrollTimeout = setTimeout(() => {
+                    header.classList.remove('header-hidden');
+                }, 200); 
+            });
+        })();
+
         window.onload = function () {
-            window.scrollTo(0, 0);  // Scrolls to the top of the page when the site loads
-            showTeam('executive-board'); // Automatically display Executive Board on load
+            window.scrollTo(0, 0);  
+            showTeam('executive-board'); 
         };
 
         var togglebtn = document.querySelector(".togglebtn");
-        var nav = document.querySelector(".navlinks");
+        var nav = document.querySelector(".nav-links");
 
-        togglebtn.addEventListener("click", function () {
-            this.classList.toggle("click");
-            nav.classList.toggle("open");
-        });
+        if (togglebtn && nav) {
+            togglebtn.addEventListener("click", function () {
+                this.classList.toggle("click");
+                nav.classList.toggle("open");
+            });
+        }
 
+        // Function to show selected team and hide others
         function showTeam(teamId) {
             var teams = document.querySelectorAll('.officer-container');
             teams.forEach(function (team) {
@@ -325,13 +370,16 @@
             }
         }
 
+        // Smooth scroll to newsletter section
         document.querySelector('a[href="#newsletter"]').addEventListener('click', function (e) {
             e.preventDefault(); 
             const targetElement = document.querySelector('#newsletter');
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
         });
     </script>
 
 </body>
 
 </html>
-    
