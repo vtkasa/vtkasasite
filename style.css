@@ -62,14 +62,14 @@ body {
 
 .site-header .logo-container img {
   margin-top: 10px;
-  max-width: 70px; 
+  max-width: 70px; /* Adjust the logo size */
 }
 
 .nav-links {
   display: flex;
-  gap: 2rem; 
-  margin-left: auto; 
-  margin-right: 20px; 
+  gap: 2rem; /* Space between the links */
+  margin-left: auto; /* Push the links to the right */
+  margin-right: 20px; /* Remove margin to ensure links touch the edge */
 }
 
 .nav-links li {
@@ -78,7 +78,7 @@ body {
 
 .nav-links a {
   color: white;
-  font-size: 1.5rem; 
+  font-size: 1.5rem; /* Adjust the text size */
   transition: color 0.3s ease;
   text-align: center;
 }
@@ -90,15 +90,15 @@ body {
 /* Hero Header Section */
 .hero-header {
   width: 100%;
-  height: 80vh; 
+  height: 80vh; /* Reduced height from 100vh to 80vh */
   display: flex;
   justify-content: center;
   align-items: center;
   background: none;
   position: relative;
   flex-direction: column;
-  padding: 1.5rem;
-  margin-top: 8rem; 
+  padding: 1.5rem; /* Reduced padding */
+  margin-top: 8rem; /* Adjusted to match reduced header height */
 }
 
 .logo-container {
@@ -108,7 +108,7 @@ body {
 }
 
 .logo {
-  max-width: 12vw; 
+  max-width: 12vw; /* Reduced from 16vw */
   height: auto;
   margin-bottom: 1vh;
 }
@@ -120,12 +120,12 @@ body {
 
 .hero-text h1 {
   color: #ffffff;
-  font-size: clamp(24px, 5vw, 48px); 
+  font-size: clamp(24px, 5vw, 48px); /* Enhanced responsiveness */
 }
 
 .hero-text p {
   color: #ffffff;
-  font-size: clamp(14px, 2vw, 20px); 
+  font-size: clamp(14px, 2vw, 20px); /* Enhanced responsiveness */
 }
 
 .btn-group {
@@ -139,10 +139,10 @@ body {
   background-color: #ffff;
   border: 2px solid #ffff;
   color: #003478;
-  padding: 0.8rem 1.6rem; 
+  padding: 0.8rem 1.6rem; /* Reduced padding */
   margin: 0.5rem;
   border-radius: 20px;
-  font-size: clamp(10px, 1.5vw, 14px);
+  font-size: clamp(10px, 1.5vw, 14px); /* Adjusted font size */
   position: relative;
   overflow: hidden;
   transition: background 0.1s ease, color 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
@@ -185,13 +185,13 @@ body {
 
 /* Spacing between sections */
 section {
-  margin-top: 30vh;
+  margin-top: 30vh; /* Increased extra space between sections */
 }
 
 /* About Us Section */
 .about-us {
   width: 100%;
-  padding: 8vh 0;
+  padding: 8vh 0; /* Increased padding for more space inside the section */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -244,12 +244,12 @@ section {
 /* Officer Spotlight Section */
 .officer-spotlight {
   width: 100%;
-  padding: 8vh 2vw; 
+  padding: 8vh 2vw; /* Increased padding for more space inside the section */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center; 
+  text-align: center; /* Ensure the text in the section is centered */
 }
 
 .officer-spotlight h2 {
@@ -312,7 +312,7 @@ section {
 /* Our Events Section */
 .our-events {
   width: 100%;
-  padding: 8vh 0; 
+  padding: 8vh 0; /* Increased padding for more space inside the section */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -323,25 +323,25 @@ section {
   font-size: clamp(24px, 3vw, 40px);
   color: #ffffff;
   text-align: center;
-  margin-bottom: 2vh; 
+  margin-bottom: 2vh; /* Added margin for spacing */
 }
 
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  grid-auto-rows: auto; 
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-auto-rows: auto; /* Automatically create rows as needed */
   gap: 1.5vw;
   margin-top: 2vh;
   max-width: 85vw;
-  justify-items: center; 
-  align-items: start; 
+  justify-items: center; /* Center items horizontally */
+  align-items: start; /* Align items to the top vertically */
 }
 
 /* Event Item Styles */
 .event-item {
   position: relative;
   overflow: hidden;
-  width: 100%; 
+  width: 100%; /* Ensure event items take full width of the grid cell */
 }
 
 .event-item img {
@@ -381,16 +381,17 @@ section {
 /* Tablets and Medium Devices */
 @media (max-width: 1024px) {
   .events-grid {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
   }
 }
 
 /* Mobile Devices */
 @media (max-width: 768px) {
   .events-grid {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr; /* 1 column */
   }
 
+  /* Optional: Adjust overlay text font size for smaller screens */
   .overlay-text {
     font-size: clamp(12px, 2vw, 16px);
   }
@@ -400,7 +401,8 @@ section {
 /* Newsletter Signup Section */
 .newsletter-signup {
   width: 100%;
-  height: 100vh;/* Increased padding for more space inside the section */
+  height: 100vh;
+  padding: 12vh 0; /* Increased padding for more space inside the section */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -518,12 +520,13 @@ section {
     font-size: clamp(10px, 4vw, 16px);
   }
 
+  /* Adjusting logo for mobile */
   .hero-header .logo {
     max-width: 30vw;
   }
 
   /* Adjusting events grid for mobile */
   .events-grid {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr; /* Single column on mobile */
   }
 }
