@@ -38,12 +38,12 @@ body {
 /* Header Styles */
 .site-header {
   width: 100%;
-  padding: 0.3rem 1.5rem; 
+  padding: 0.3rem 1.0rem; 
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 800;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,14 +62,14 @@ body {
 
 .site-header .logo-container img {
   margin-top: 10px;
-  max-width: 70px; /* Adjust the logo size */
+  max-width: 60px; /* Adjust the logo size */
 }
 
 .nav-links {
   display: flex;
-  gap: 2rem; /* Space between the links */
-  margin-left: auto; /* Push the links to the right */
-  margin-right: 20px; /* Remove margin to ensure links touch the edge */
+  gap: 2rem; 
+  margin-left: auto; 
+  margin-right: 20px; 
 }
 
 .nav-links li {
@@ -78,7 +78,7 @@ body {
 
 .nav-links a {
   color: white;
-  font-size: 1.5rem; /* Adjust the text size */
+  font-size: 1.0rem; /* Adjust the text size */
   transition: color 0.3s ease;
   text-align: center;
 }
@@ -529,4 +529,13 @@ section {
   .events-grid {
     grid-template-columns: 1fr; /* Single column on mobile */
   }
+}
+/* Mailchimp form styling */
+#mc_embed_signup {
+    background: #fff;
+    border-radius: 15px; /* Rounded corners */
+    max-width: 400px; /* Adjusts the width */
+    padding: 20px;
+    margin: 0 auto; /* Centers the form */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: adds shadow */
 }
