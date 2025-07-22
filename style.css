@@ -13,14 +13,24 @@ html {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 30px;
 }
 
 body {
-  background: linear-gradient(135deg, #ffffff, #003478, #C60C30, #003478);
+  background: #112f47;
   background-attachment: fixed;
   background-size: 400% 400%;
   animation: gradientAnimation 20s ease infinite;
   font-size: clamp(20px, 1.6vw, 18px);
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+nav {
+  height: 30 px;
 }
 
 @keyframes gradientAnimation {
@@ -77,7 +87,7 @@ body {
 }
 
 .nav-links a {
-  color: white;
+  color: #ffffff;
   font-size: 1.0rem;
   transition: color 0.3s ease;
   text-align: center;
@@ -89,7 +99,7 @@ body {
 
 /* Hero Header Section */
 .hero-header {
-  width: 100%;
+  width: 100vw;
   height: 80vh; 
   display: flex;
   justify-content: center;
@@ -99,12 +109,21 @@ body {
   flex-direction: column;
   padding: 1.5rem; 
   margin-top: 8rem; 
+  scroll-snap-type: y mandatory;
 }
 
 .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.wrapper {
+  scroll-snap-align: start;
+}
+
+.child {
+  scroll-snap-align: start;
 }
 
 .logo {
@@ -116,6 +135,7 @@ body {
 .hero-text {
   max-width: 55vw;
   text-align: center;
+  scroll-snap-align: start;
 }
 
 .hero-text h1 {
@@ -173,14 +193,10 @@ body {
   transform: rotate(360deg);
 }
 
-section {
-  margin-top: 30vh;
-}
-
 /* About Us Section */
 .about-us {
   width: 100%;
-  padding: 8vh 0; 
+  padding: 80vh; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,8 +208,9 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 85vw;
-  gap: 1.5vw;
+  height: 85vh;
+  width: 80vw;
+  /* gap: 1.5vw; */
 }
 
 .about-text {
@@ -345,7 +362,8 @@ section {
 
 .event-item img {
   width: 100%;
-  height: auto;
+  /*height: auto; */
+  aspect-ratio: 16 / 9; 
   border-radius: 1vw;
   object-fit: cover;
   box-shadow: 0 0.5vh 0.5vw rgba(0, 0, 0, 0.1);
@@ -353,7 +371,8 @@ section {
 }
 
 .event-item:hover img {
-  transform: scale(1.05);
+  /*transform: scale(1.05);*/
+  border-radius: 1vw rgba(0, 0, 0, 0.2);
   box-shadow: 0 0.8vh 0.8vw rgba(0, 0, 0, 0.2);
 }
 
